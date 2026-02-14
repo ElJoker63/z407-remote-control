@@ -5,6 +5,9 @@ on:
     tags:
       - 'debug-v*'  # Para releases de prueba: debug-v1.0.0
 
+permissions:
+  contents: write  # Necesario para crear releases
+
 jobs:
   build:
     name: Build Debug APK

@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'  # Se ejecuta cuando creas un tag como v1.0.0, v1.0.1, etc.
 
+permissions:
+  contents: write  # Necesario para crear releases
+
 jobs:
   build:
     name: Build APK
