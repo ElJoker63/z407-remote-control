@@ -152,7 +152,7 @@ fun HomeScreen(
                             imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                             contentDescription = "Volume Icon",
                             modifier = Modifier.align(Alignment.CenterHorizontally),
-                            tint = Gray.gray800
+                            tint = MaterialTheme.colorScheme.onSurface
                         )
 
                         Text(
@@ -176,7 +176,7 @@ fun HomeScreen(
                             imageVector = Icons.Default.GraphicEq,
                             contentDescription = "Bass Icon",
                             modifier = Modifier.align(Alignment.CenterHorizontally),
-                            tint = Gray.gray800
+                            tint = MaterialTheme.colorScheme.onSurface
                         )
 
                         Text(
@@ -391,7 +391,8 @@ fun AudioButtons(
             icon = Icons.Default.Add,
             contentDescription = "Subir volumen",
             onClick = onUp,
-            onLongPressRepeat = onUp // Se repite mientras mantiene presionado
+            onLongPressRepeat = onUp, // Se repite mientras mantiene presionado
+            color = Gray.gray800
         )
 
         HorizontalDivider(
@@ -406,7 +407,8 @@ fun AudioButtons(
             icon = Icons.Default.Remove,
             contentDescription = "Bajar volumen",
             onClick = onDown,
-            onLongPressRepeat = onDown // Se repite mientras mantiene presionado
+            onLongPressRepeat = onDown, // Se repite mientras mantiene presionado
+            color = Gray.gray800
         )
     }
 }
@@ -457,7 +459,7 @@ fun ControlButton(
         modifier = Modifier.size(64.dp),
         interactionSource = interactionSource,
         colors = androidx.compose.material3.IconButtonDefaults.iconButtonColors(
-            contentColor = color ?: Gray.gray800
+            contentColor = color ?: MaterialTheme.colorScheme.onSurface
         )
     ) {
         Icon(
